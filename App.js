@@ -5,7 +5,7 @@ import IndexScreen from "./src/screens/IndexScreen";
 import EditScreen from "./src/screens/EditScreen";
 import ShowScreen from "./src/screens/ShowScreen";
 import CreateScreen from "./src/screens/CreateScreen";
-import { BlogProvider } from "./src/context/BlogContext";
+import { Provider } from "./src/context/BlogContext";
 
 const navigator = createStackNavigator(
   {
@@ -17,7 +17,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: "Index",
     defaultNavigationOptions: {
-      title: "Blogs",
+      title: "Blog",
     },
   }
 );
@@ -26,8 +26,8 @@ const App = createAppContainer(navigator);
 
 export default () => {
   return (
-    <BlogProvider>
+    <Provider>
       <App />
-    </BlogProvider>
+    </Provider>
   );
 };
